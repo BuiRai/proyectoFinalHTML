@@ -1,0 +1,125 @@
+
+/*generales*/
+@font-face {
+    font-family: 'DINPro-Regular';
+    src: url('../fonts/DINPro-Regular.otf');
+
+}
+body,h1,h2,h3,h4,h5,h6,p,div,span{
+    font-family: 'DINPro-Regular';
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(../images/background.jpg) no-repeat fixed;
+    /*opacity: 0.9;*/
+    /*background: #003E3A;*/
+}
+
+input[type="text"], input[type="password"], input[type="submit"],input[type="email"]{
+    border-radius: 10px;
+}
+.icon-menu{
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+.icon-menu button{
+    border-radius: 5px;
+    background: white;
+}
+.icon-menu i{
+    font-size: 20px;
+}
+
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
+}
+/*-------------top bar-----------------*/
+header h4{
+    color: white;
+    margin: 0;
+}
+.header-body {
+    width: 100%;
+}
+.login{
+    padding-top: 10px;
+}
+.login label{
+    color: white;
+}
+.top-bar {
+    height: 50px;
+    padding: 1% 5%;
+}
+.top-bar::before{
+    content: '';
+    background-image: url(../images/header.jpg);
+    background-repeat: repeat;
+    opacity: 0.3;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 90px;
+    left: 0;
+    top: 0;
+}
+
+#register-btn{
+    color: blue;
+}
+/*-----------slider Header------------------*/
+
+#slider{
+    position: relative;
+    border-top: 2px solid #bfa100;
+    border-bottom: 2px solid #bfa100;
+}
+#slider #img-container{
+    overflow-x: hidden;
+    width: 100%;
+    background: #222222;
+    padding: 10px 0;
+    position: relative;
+}
+
+#slider #img-container div {
+    display: table-cell;
+}
+
+#slider #img-container img {
+    margin: 0 10px;
+    width: 222px;
+    height: 320px;
+}
+
+#slider a {
+    position: absolute;
+    top: 115px;
+}
+
+#slider a i {
+    font-size: 90px;
+}
+
+#slider a#left-arrow{
+    left: 0;
+    z-index: 9;
+}
+
+#slider a#right-arrow {
+    right: 0;
+}
+/*----------------------------------------------------*/
+
+.container{
+    padding: 8px;
+}
+.main{
+    width: 100%;
+}
