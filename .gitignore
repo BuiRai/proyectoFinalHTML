@@ -1,0 +1,5 @@
+# Node and related ecosystem
+# ==========================
+bower_components/
+.idea/
+.idea/vcs.xml
