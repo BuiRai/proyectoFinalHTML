@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>Peliculas y Series</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
     <!--our styles-->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 
     <!--styles bower components-->
     <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css">
@@ -19,7 +22,7 @@
 <body ng-app="project">
 <header class="header-body">
     <div class="top-bar">
-        <a href="index.html" id="logo" class="float-left"><img src="assets/images/logo.png"></a>
+        <a href="#" id="logo" class="float-left"><img src="assets/images/logo.png"></a>
         <div class="login float-right">
             <form action="#">
                 <label for="user_login">Usuario: </label>
@@ -56,11 +59,84 @@
         <a href="#" id="right-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
     </div>
 </header>
-<div ng-view class="container">
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <aside class="left-side">
+                <h1>Menú</h1>
+                <nav class="accordion-wrapper">
+                    <div class="accordion-item">
+                        <a class="no-child">Página principal</a>
+                        <a class="no-child">Noticias</a>
+                        <a class="accordion-title" href="#nav-movie-section">Películas</a>
+                        <div id="nav-movie-section" class="accordion-content">
+                            <ul>
+                                <li class="item movie_category"><a>Acción</a></li>
+                                <li class="item movie_category"><a>Comedia</a></li>
+                                <li class="item movie_category"><a>Romance</a></li>
+                                <li class="item movie_category"><a>Terror</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <a class="accordion-title" href="#nav-series-section">Series</a>
+                        <div id="nav-series-section" class="accordion-content">
+                            <ul>
+                                <li class="item"><a>Aventura</a></li>
+                                <li class="item"><a>Drama</a></li>
+                                <li class="item"><a>Terror</a></li>
+                                <li class="item"><a>Acción</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+        </div>
+        <div class="col-md-10">
+            <section class="main" ng-view></section>
+        </div>
+    </div>
 </div>
 
 <footer>
-
+    <section class="center">
+        <div class="row">
+            <section class="col-md-6">
+                <h3 class="title">Contacto</h3>
+                <p>Para cualquier información, mande correo a <a
+                        href="mailto:someone@example.com">someone@example.com</a>. También puede contarcarnos en
+                    nuestras redes sociales:</p>
+                <section class="center">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="" class="social">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="" class="social">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="column col-6">
+                <h3 class="title">Acerca de</h3>
+                <p>Página elaborada únicamente para la materia Herramientas de Programación Web con HTML5</p>
+                <h4>¿Quieres regresar a alguna sección específica?</h4>
+                <a href="">Peliculas</a> | <a href="">Series</a> | <a href="">Documentales</a> | <a href="">Anime</a>
+            </section>
+        </div>
+        <br>
+        <div class="row">
+            <div class="column col-12">
+                <div class="center copyright">
+                    &copy; 2006 - Proyecyo de HTML5
+                </div>
+            </div>
+        </div>
+    </section>
 </footer>
 
 <!--Libs-->

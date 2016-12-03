@@ -1,0 +1,63 @@
+
+/**
+ *########################################################################
+ * Footer
+ * #######################################################################
+ */
+
+footer {
+	background: #003338;
+	margin: auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: #D3FFEB;
+}
+
+footer section.center {
+	width: 70%;
+	text-align: center;
+	margin: auto;
+}
+
+footer a {
+	color: #729202;
+}
+
+footer a:hover {
+	color: #876903;
+}
+
+footer h3 {
+	color: #16D9C0;
+	text-align: center;
+}
+
+footer .social {
+	text-decoration: none;
+}
+
+footer .social i {
+	color: #16D9C0;
+	font-size: 40px;
+}
+
+footer a.social i:hover {
+	color: #AAFBD4;
+}
+
+footer a.social p {
+	color: #16D9C0;
+	float: top;
+	margin-bottom: 0px;
+}
+
+footer .copyright {
+	color: #8EC2B0;
+	font-style: italic;
+	font-size: 14px;
+}
+
+footer h4{
+	color: #DDFCA1;
+	font-size: 14px;
+}
