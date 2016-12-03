@@ -5,7 +5,7 @@
     <title>Peliculas y Series</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <!--our styles-->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
     <!--styles bower components-->
     <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css">
@@ -16,90 +16,76 @@
     <!--favicon-->
     <link rel="shortcut icon" href="favicon.ico"/>
 </head>
-<body>
-    <!--<div ng-view class="container"></div>-->
+<body ng-app="project">
+<header class="header-body">
+    <div class="top-bar">
+        <a href="index.html" id="logo" class="float-left"><img src="assets/images/logo.png"></a>
+        <div class="login float-right">
+            <form action="#">
+                <label for="user_login">Usuario: </label>
+                <input type="text" id="user_login" name="user_login" >
+                <label for="password_login">Contraseña: </label>
+                <input type="password" id="password_login" name="password_login" >
+                <input id="login_button" type="submit" value="Entrar">
+            </form>
+
+            <div class="float-right">
+                <span><a href="register.html" id="register-btn">Registrarse</a></span>
+            </div>
+        </div>
+        <div class="icon-menu">
+            <button><i class="fa fa-bars" aria-hidden="true"></i></button>
+        </div>
+    </div>
+
+    <div id="slider">
+        <a href="#" id="left-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        <div id="img-container">
+            <div><img src="assets/images/inferno.jpg"></div>
+            <div><img src="assets/images/previews/ahs_prev.jpg"></div>
+            <div><img src="assets/images/previews/terranova_prev.jpg"></div>
+            <div><img src="assets/images/previews/narcos_prev.jpg"></div>
+            <div><img src="assets/images/previews/lost_prev.PNG"></div>
+            <div><img src="assets/images/previews/bb_prev.jpg"></div>
+            <div><img src="assets/images/previews/bcs_prev.jpg"></div>
+            <div><img src="assets/images/previews/hoc_prev.jpg"></div>
+            <div><img src="assets/images/previews/zoo_prev.jpg"></div>
+            <div><img src="assets/images/previews/twd_prev.jpg"></div>
+        </div>
+
+        <a href="#" id="right-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    </div>
+</header>
+<div ng-view class="container">
+</div>
+
+<footer>
+
+</footer>
+
+<!--Libs-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/ngSweetAlert/SweetAlert.min.js"></script>
+<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+
+<!--Our javascripts files-->
+<!--angular config-->
+<script src="application.js"></script>
+<script src="assets/js/config.js"></script>
+
+<script src="assets/js/header.js"></script>
+
+<!--Multimedias section-->
+<script src="modules/multimedia.module.js"></script>
+<script src="routes/multimedia.routes.js"></script>
+<script src="controllers/multimedia.controller.js"></script>
 
 
-    <!--<section ng-view></section>-->
-
-    <section ng-view></section>
-
-    <!--libs-->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/ngSweetAlert/SweetAlert.min.js"></script>
-    <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
-
-    <script src="js/config.js"></script>
-
-    <script src="application.js"></script>
-
-    <!--Multimedias section-->
-    <script src="modules/multimedia.module.js"></script>
-    <script src="routes/multimedia.routes.js"></script>
-    <script src="controllers/multimedia.controller.js"></script>
 </body>
-<!--<body ng-app="project">-->
-<!--<header class="header-body">-->
-    <!--<div class="top-bar">-->
-        <!--<a href="index.html" id="logo" class="float-left"><img src="images/logo.png"></a>-->
-        <!--<div class="login float-right">-->
-            <!--<form action="#">-->
-                <!--<label for="user_login">Usuario: </label>-->
-                <!--<input type="text" id="user_login" name="user_login" >-->
-                <!--<label for="password_login">Contraseña: </label>-->
-                <!--<input type="password" id="password_login" name="password_login" >-->
-                <!--<input id="login_button" type="submit" value="Entrar">-->
-            <!--</form>-->
-
-            <!--<div class="float-right">-->
-                <!--<span><a href="register.html" id="register-btn">Registrarse</a></span>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="icon-menu">-->
-            <!--<button><i class="fa fa-bars" aria-hidden="true"></i></button>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div id="slider">-->
-        <!--<a href="#" id="left-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></a>-->
-        <!--<div id="img-container">-->
-            <!--<div><img src="images/inferno.jpg"></div>-->
-            <!--<div><img src="images/previews/ahs_prev.jpg"></div>-->
-            <!--<div><img src="images/previews/terranova_prev.jpg"></div>-->
-            <!--<div><img src="images/previews/narcos_prev.jpg"></div>-->
-            <!--<div><img src="images/previews/lost_prev.PNG"></div>-->
-            <!--<div><img src="images/previews/bb_prev.jpg"></div>-->
-            <!--<div><img src="images/previews/bcs_prev.jpg"></div>-->
-            <!--<div><img src="images/previews/hoc_prev.jpg"></div>-->
-            <!--<div><img src="images/previews/zoo_prev.jpg"></div>-->
-            <!--<div><img src="images/previews/twd_prev.jpg"></div>-->
-        <!--</div>-->
-
-        <!--<a href="#" id="right-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></a>-->
-    <!--</div>-->
-<!--</header>-->
-<!--<div ng-view class="container">-->
-<!--</div>-->
-
-<!--<footer>-->
-
-<!--</footer>-->
-
-<!--<script src="bower_components/angular/angular.js"></script>-->
-<!--<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>-->
-<!--<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
-<!--<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>-->
-<!--<script src="bower_components/angular-animate/angular-animate.js"></script>-->
-<!--<script src="bower_components/angular-touch/angular-touch.js"></script>-->
-<!--<script src="bower_components/ngSweetAlert/SweetAlert.min.js"></script>-->
-<!--<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>-->
-<!--<script src="js/config.js"></script>-->
-<!--<script src="js/header.js"></script>-->
-
-<!--</body>-->
 </html>
