@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/mainContent.css">
 
     <!--styles bower components-->
     <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css">
@@ -66,7 +67,7 @@
                 <h1>Menú</h1>
                 <nav class="accordion-wrapper">
                     <div class="accordion-item">
-                        <a class="no-child">Página principal</a>
+                        <a class="no-child" href="#/">Página principal</a>
                         <a class="no-child">Noticias</a>
                         <a class="accordion-title" href="#nav-movie-section">Películas</a>
                         <div id="nav-movie-section" class="accordion-content">
@@ -149,19 +150,20 @@
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/ngSweetAlert/SweetAlert.min.js"></script>
 <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
 
 <!--Our javascripts files-->
-<!--angular config-->
-<script src="application.js"></script>
-<script src="assets/js/config.js"></script>
-
 <script src="assets/js/header.js"></script>
+<script src="assets/js/navegation.js"></script>
+
+<!--Angular-->
+<script src="application.js"></script>
 
 <!--Multimedias section-->
 <script src="modules/multimedia.module.js"></script>
-<script src="routes/multimedia.routes.js"></script>
+<script src="services/multimedia.service.js"></script>
 <script src="controllers/multimedia.controller.js"></script>
-
+<script src="routes/multimedia.routes.js"></script>
 
 </body>
 </html>

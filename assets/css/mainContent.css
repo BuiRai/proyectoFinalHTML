@@ -1,0 +1,74 @@
+
+/**
+ *########################################################################
+ * Main section
+ * #######################################################################
+ */
+
+.main{
+	float: left;
+}
+
+.main .title {
+	padding: 5px 0px 20px;
+	margin: auto;
+	width: 50%;
+	font-size: 35px;
+	color: #D6D6D6;
+}
+
+.preview {
+	padding: 10px;
+}
+
+.preview:hover {
+	background: rgba(252,253,182,0.3);
+	opacity: 0.8;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.preview figure {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.preview figure img {
+	width: 100%;
+	height: 100%;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+}
+.preview figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.preview h1 {
+	color: #FF9434;
+	margin: 0px 0px 5px;
+	font-size: 23px;
+}
+
+.preview .rating {
+	font-size: 14px;
+	color: #ffda00;
+}
+
+.preview .rating .qualification {
+	color: #FDFEA4;
+}
+
+.preview .rating i:hover {
+	color: #F7FF7B;
+}
+
+.preview .year {
+	color: #EDFF8C;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+}
