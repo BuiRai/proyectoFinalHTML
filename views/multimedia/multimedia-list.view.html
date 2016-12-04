@@ -1,25 +1,27 @@
 <section ng-init="getListMultimedia()">
     <div class="row">
         <div class="col-md-3" ng-repeat="multimedia in multimediaList">
-            <div class="preview">
-                <figure>
-                    <img ng-src="http://localhost:8080/{{multimedia.urlImage}}">
-                </figure>
-                <h1>{{ multimedia.title }}</h1>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="rating">
+            <a href="#/multimedia/{{multimedia._id}}">
+                <div class="preview">
+                    <figure>
+                        <img ng-src="http://localhost:8080/{{multimedia.urlImage}}">
+                    </figure>
+                    <h1>{{ multimedia.title }}</h1>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="rating">
                         <span class="qualification">
                             <b>Calificatión</b>
                         </span>
-                            <i ng-repeat="_ in ((_ = []) && (_.length=multimedia.qualification) && _) track by $index" class="fa fa-star"></i>
+                                <i ng-repeat="_ in ((_ = []) && (_.length=multimedia.qualification) && _) track by $index" class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <time class="year">{{ multimedia.year | date }}</time>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <time class="year">{{ multimedia.year | date }}</time>
-                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </section>

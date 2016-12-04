@@ -25,3 +25,9 @@
 		e.preventDefault();
 	});
 })();
+
+
+( function () {
+	var player = new MediaElementPlayer('#player1');
+	console.log("asdasd");
+})();

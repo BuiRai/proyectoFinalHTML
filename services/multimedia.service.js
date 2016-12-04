@@ -11,11 +11,16 @@ var url = 'http://localhost:8080/api/';
 
 function MultimediaService($http) {
     return {
-        getListMultimedia: getListMultimedia
+        getListMultimedia: getListMultimedia,
+        findOne: findOne
     };
 
     function getListMultimedia() {
-        return $http({ method: 'GET', url: 'http://localhost:8080/api/multimedias' });
+        return $http({ method: 'GET', url: url + 'multimedias' });
+    }
+
+    function findOne(id) {
+        return $http({ method: 'GET', url: url + 'multimedias/' + id });
     }
 }
 
