@@ -9,7 +9,51 @@
             </figure>
         </div>
         <div class="col-md-8">
-
+            <video controls="true" autoplay>
+                <source ng-src="{{multimedia.urlVideo}}" type="video/mp4" >
+            </video>
+            <div class="panel panel-primary transparent">
+                <div class="panel-heading">
+                    <h4>Información de la serie</h4>
+                </div>
+                <div class="panel-body">
+                    <h3>Descripción de la serie</h3>
+                    <p>
+                        Calificación:
+                        <span class="badge" ng-class="{
+                            'good-qualification': multimedia.qualification === 5,
+                            'normal-qualification': multimedia.qualification > 2 && multimedia.qualification < 5,
+                            'bad-qualification': multimedia.qualification <= 2
+                        }">
+                            {{multimedia.qualification}}
+                        </span>
+                    </p>
+                    <p>Año de emisión: {{ multimedia.year | date }}</p>
+                    <p>{{ multimedia.description }}</p>
+                    <p>
+                        Para más información de esta serie visita <a ng-href="{{multimedia.urlInfo}}"> este enlace</a>
+                    </p>
+                    <section class="categories-section" ng-if="multimedia.categories.length > 0">
+                       <p>
+                           Categorias:
+                           <span class="label space-right"
+                                 ng-class="{
+                                'label-danger': category.name === 'Drama',
+                                'label-success': category.name === 'Acción',
+                                'label-warning': category.name === 'Romance',
+                                'label-default': category.name === 'Terror',
+                                'label-info': category.name === 'Comedia'
+                              }"
+                                 ng-repeat="category in multimedia.categories">
+                            {{ category.name }}
+                        </span>
+                       </p>
+                    </section>
+                    <section class="categories-section text-danger" ng-if="multimedia.categories.length <= 0">
+                        <b>No hay categorias disponibles</b>
+                    </section>
+                </div>
+            </div>
         </div>
     </div>
 </section>

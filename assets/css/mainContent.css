@@ -72,3 +72,30 @@
 	padding: 0px;
 	font-size: 12px;
 }
+
+.transparent {
+	color: white;
+	background: rgb(54, 25, 25) !important;
+	background: rgba(54, 25, 25, .5) !important;
+}
+
+.categories-section {
+	padding-top: 8px;
+	border-top: teal solid 1px;
+}
+
+.space-right {
+	margin-right: 5px;
+}
+
+.good-qualification {
+	background: limegreen !important;
+}
+
+.normal-qualification {
+	background: cornflowerblue !important;
+}
+
+.bad-qualification {
+	background: indianred !important;
+}
